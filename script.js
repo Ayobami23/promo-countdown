@@ -1,7 +1,5 @@
 const birthday = new Date('2024-11-31');
 const countdown = document.getElementById('countdown');
-const toggleBtn = document.getElementById('toggleBtn');
-const menu = document.querySelector('nav');
 
 function updateCountdown() {
   const currentDate = new Date();
@@ -37,6 +35,16 @@ function updateCountdown() {
 
 updateCountdown();
 
+// toggler script
+const toggleBtn = document.getElementById('toggleBtn');
+const menu = document.querySelector('nav');
 toggleBtn.addEventListener('click', () => {
   menu.classList.toggle('active');
+  if (menu.classList.contains('active')) {
+    toggleBtn.classList.remove('fa-bars');
+    toggleBtn.classList.add('fa-close');
+  } else {
+    toggleBtn.classList.remove('fa-close');
+    toggleBtn.classList.add('fa-bars');
+  }
 });
