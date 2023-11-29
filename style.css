@@ -49,7 +49,7 @@ header .logo a {
   font-size: 25px;
 }
 
-header i {
+header #toggleBtn {
   display: none;
   cursor: pointer;
 }
@@ -153,7 +153,7 @@ main .video i {
 }
 
 @media screen and (width <= 980px) {
-  header i {
+  header #toggleBtn {
     display: block;
   }
 
