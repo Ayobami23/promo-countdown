@@ -1,11 +1,7 @@
 const birthday = new Date('2024-11-31');
-
 const countdown = document.getElementById('countdown');
-
-let d = document.getElementById('days');
-let h = document.getElementById('hours');
-let m = document.getElementById('minutes');
-let s = document.getElementById('seconds');
+const toggleBtn = document.getElementById('toggleBtn');
+const menu = document.querySelector('nav');
 
 function updateCountdown() {
   const currentDate = new Date();
@@ -40,3 +36,7 @@ function updateCountdown() {
 }
 
 updateCountdown();
+
+toggleBtn.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
